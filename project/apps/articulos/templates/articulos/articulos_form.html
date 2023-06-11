@@ -1,0 +1,10 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+    <h1>Crea Tu Posteo</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Crear!</button>
+    </form>
+{% endblock contenido %}

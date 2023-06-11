@@ -13,3 +13,9 @@ class ArticulosCategoriaCreate(CreateView):
     form_class = forms.ArticulosCategoriaForm
     success_url = reverse_lazy("articulos:index")
 
+class ArticulosCreate(CreateView):
+    model = models.Articulos
+    form_class = forms.ArticulosForm
+    success_url = reverse_lazy("articulos:index")
+    
+

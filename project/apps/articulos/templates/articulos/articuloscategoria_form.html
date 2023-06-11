@@ -1,0 +1,10 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+    <h2>Añadir categoria</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+{% endblock contenido %}

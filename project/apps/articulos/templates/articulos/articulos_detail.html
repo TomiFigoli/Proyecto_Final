@@ -1,0 +1,20 @@
+{% extends 'home/index.html' %}
+
+{% block title %}
+    Articulos
+{% endblock title %}
+
+{% block content_articulo %}
+   <h1>{{object.titulo}}</h1>
+   <h2>{{object.subtitulo}}</h2>
+   <div>
+    <p>{{object.cuerpo}}</p>
+   </div>
+   <p>{{object.autor}}</p>
+   <p>{{object.fecha}}</p>
+   <p>{{object.categoria}}</p>
+
+    {% url 'home:index' as url %}
+    
+
+{% endblock content_articulo %}

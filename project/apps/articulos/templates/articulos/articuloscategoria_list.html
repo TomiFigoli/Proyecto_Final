@@ -1,0 +1,29 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+    
+{% block search %}
+{% if object_list %}
+
+<!-- Sirve para buscar categorías por nombre. Se pasa a la variable consulta de la vista. -->
+<!-- <div class="py-lg-4">
+    <form action="}" method="get"> -->
+        <input name="consulta" type="text" placeholder="Buscar...">
+    </form>
+</div>
+
+{% for categoria in object_list %}
+    <ul>
+        <li>{{ categoria.nombre }}
+        </li>
+    </ul>
+{% endfor %}
+{% else %}
+<p class="fs-4 fst-italic">No hay registros ingresados!!</p>
+{% endif %}
+
+
+{% endblock search %}
+
+
+{% endblock contenido %}

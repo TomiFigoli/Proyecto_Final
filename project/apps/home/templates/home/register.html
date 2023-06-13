@@ -1,0 +1,15 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-grid gap-3">
+            <button type="submit" class="btn btn-success">Registrar nuevo usuario</button>
+        </div>
+    </form>
+    {%if form.is_valid %}
+        <p>Usuario Creado!</p>
+        <a href="home:login">Ir a login</a>
+    {%endif%}
+{% endblock contenido %}

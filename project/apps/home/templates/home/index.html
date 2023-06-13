@@ -6,9 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <header>header</header>
-
+    <header>header
+        <nav>
+            <a href="{% url 'home:login' %}">Login</a>
     {% block contenido %}
+            <a href="{% url 'home:register' %}">Registrate</a>    
+            <a href=""></a>    
+        </nav>
+    </header>
+
         Inicio
     {% endblock contenido %}
 </body>
